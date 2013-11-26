@@ -136,6 +136,15 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs
 
+#ThemeManager
+PRODUCT_PACKAGES += \
+       ThemeManager \
+       ThemeChooser \
+       com.tmobile.themes
+
+PRODUCT_COPY_FILES += \
+       vendor/ose/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
