@@ -20,6 +20,14 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
     persist.sys.root_access=3
 
+# ROM Statistics and ROM Identification
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.romstats.url=http://www.drdevs.com/stats/ose/ \
+    ro.romstats.name=OSE \
+    ro.romstats.version=$(shell date +"%m-%d-%y") \
+    ro.romstats.askfirst=0 \
+    ro.romstats.tframe=1
+
 # Disable excessive dalvik debug messages
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
@@ -188,4 +196,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ose.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.ose.version=$(OSE_VERSION) \
     ro.modversion=$(OSE_MOD_VERSION)
-
