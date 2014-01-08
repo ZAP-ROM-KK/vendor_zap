@@ -60,8 +60,7 @@ PRODUCT_COPY_FILES += \
 
 # Workaround for NovaLauncher zipalign fails
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
-    vendor/slim/prebuilt/common/app/PerformanceControl.apk:system/app/PerformanceControl.apk
+    vendor/slim/prebuilt/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
