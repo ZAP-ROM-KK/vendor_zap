@@ -19,6 +19,13 @@ if [ $? -eq 0 ]; then
   LABELDATA=1
 fi
 
+# Recheck other files under /data
+ls -Z /data/misc/wifi/wpa_supplicant.conf | grep -q "wifi_"
+if [ $? -eq 1 ]; then
+  $L "data is unlabeled, fixing..."
+  LABELDATA=1
+fi
+
 ls -Z /system/bin/surfaceflinger | grep -q unlabeled
 if [ $? -eq 0 ]; then
   $L "system is unlabeled, fixing... (You really should update your recovery)"
@@ -36,13 +43,6 @@ if [ $? -eq 0 ]; then
   $L "dalvik-cache is unlabeled, fixing..."
   LABELDALVIKCACHE=1
 fi
-
-ls -Zd /cache/dalvik-cache | grep -q unlabeled
-if [ $? -eq 0 ]; then
-  $L "dalvik-cache is unlabeled, fixing..."
-  LABELDALVIKCACHE=1
-fi
-
 
 if [ $LABELSYS = "1" ]; then
   busybox mount -o remount,rw /system
