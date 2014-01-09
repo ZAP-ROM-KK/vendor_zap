@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/ose/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
-# ose-specific init file
+# OSE-specific init file
 PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/etc/init.local.rc:root/init.ose.rc
 
@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/etc/init.d.cfg:system/etc/init.d.cfg \
     vendor/ose/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Workaround for NovaLauncher zipalign fails
+# Workaround for Apex zipalign fails
 PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk
 
@@ -92,16 +92,12 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGES += \
     Camera \
     Development \
-    SpareParts \
     Superuser \
     su
 
 # Optional packages
 PRODUCT_PACKAGES += \
     Basic \
-    HoloSpiralWallpaper \
-    NoiseField \
-    Galaxy4 \
     LiveWallpapersPicker \
     PhaseBeam
 
@@ -113,10 +109,7 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    SlimCenter \
-    SlimFileManager \
     LatinIME \
-    SlimIRC \
     BluetoothExt \
     DashClock
 
@@ -165,7 +158,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Versioning System
-# KitKat OSE Alpha releases
+# OSE Alpha releases
 PRODUCT_VERSION_MAJOR = 4.4.2
 PRODUCT_VERSION_MINOR = Alpha
 PRODUCT_VERSION_MAINTENANCE = 1
