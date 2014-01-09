@@ -1,7 +1,6 @@
 #!/bin/sh
 #
-# Squish a CM otapackage for distribution
-# cyanogen
+# Squish a OSE otapackage for distribution
 #
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
@@ -41,10 +40,6 @@ OPTICHARGER=$ANDROID_BUILD_TOP/vendor/ose/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 DELETE_MEDIA="*.qmg"
-DELETE_APKS="LiveWallpapers.apk SpeechRecorder.apk VideoEditor.apk HoloSpiralWallpaper.apk MagicSmokeWallpapers.apk NoiseField.apk Galaxy4.apk OpenWnn.apk PinyinIME.apk"
-DELETE_PRIV_APKS="Launcher2.apk  VoiceDialer.apk"
-DELETE_GALLERY="Gallery2.apk"
-DELETE_FONTS="MTLmr3m.ttf"
 
 REPACK=$OUT/repack.d
 printf "Sanitizing environment..."
@@ -139,18 +134,6 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 [ -d $REPACK/ota/system/lib/modules ] && \
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
-# Fix LCD Density for ose
-DEVICELCD=`sed -n -e'/ro\.sf\.lcd_density/s/^.*=//p' $OUT/system/build.prop`
-if [ "$DEVICELCD" = "240" ]; then
-   sed -i 's/ro.sf.lcd_density=240/ro.sf.lcd_density=182/g' $OUT/system/build.prop
-elif [ "$DEVICELCD" = "320" ]; then
-    sed -i 's/ro.sf.lcd_density=320/ro.sf.lcd_density=245/g' $OUT/system/build.prop
-elif [ "$DEVICELCD" = "480" ]; then
-    sed -i 's/ro.sf.lcd_density=480/ro.sf.lcd_density=370/g' $OUT/system/build.prop
-elif [ "$DEVICELCD" = "213" ]; then
-    sed -i 's/ro.sf.lcd_density=213/ro.sf.lcd_density=182/g' $OUT/system/build.prop
-fi
-
 # Fix LCD Density for GNote
 DEVICEID=`sed -n -e'/ro\.product\.device/s/^.*=//p' $OUT/system/build.prop`
 if [ "$DEVICEID" = "SGH-I717" ]; then
@@ -173,10 +156,10 @@ CAMERARESOLUTION=`sed -n -e'/ro\.camera\.res/s/^.*=//p' $REPACK/ota/system/build
 #fi
 
 # Swap boot.img
-PREBUILTKERNEL=$OUT/system/slimkernel/boot.img
+PREBUILTKERNEL=$OUT/system/osekernel/boot.img
 if [ -e "$PREBUILTKERNEL" ];then
    rm -f $REPACK/ota/boot.img
-   mv -f $REPACK/ota/system/slimkernel/boot.img $REPACK/ota/boot.img
+   mv -f $REPACK/ota/system/osekernel/boot.img $REPACK/ota/boot.img
 fi
 
 # Determine what to name the new signed package
