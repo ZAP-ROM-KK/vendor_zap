@@ -1,7 +1,7 @@
 #!/sbin/sh
 # 
 # /system/addon.d/50-ose.sh
-# During a ose upgrade, this script backs up /system/etc/hosts,
+# During a OSE upgrade, this script backs up /system/etc/hosts,
 # /system is formatted and reinstalled, then the file is restored.
 #
 
