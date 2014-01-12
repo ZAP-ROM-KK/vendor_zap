@@ -99,6 +99,7 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGES += \
     Camera \
     Development \
+    OSEPapers \
     Superuser \
     su
 
