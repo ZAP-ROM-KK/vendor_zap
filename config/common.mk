@@ -176,7 +176,7 @@ endif
 ifndef OSE_BUILD_TYPE
     OSE_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
-    OSE_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+    OSE_POSTFIX := -$(shell date)
 endif
 
 # Set all versions
