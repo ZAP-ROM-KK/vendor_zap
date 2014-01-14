@@ -99,6 +99,7 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGES += \
     Camera \
     Development \
+    OSEPapers \
     Superuser \
     su
 
@@ -176,7 +177,7 @@ endif
 ifndef OSE_BUILD_TYPE
     OSE_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
-    OSE_POSTFIX := -$(shell date)
+    OSE_POSTFIX := -$(shell date +"%m%d%Y")
 endif
 
 # Set all versions
