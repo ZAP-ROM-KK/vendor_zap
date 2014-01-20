@@ -45,8 +45,6 @@ add_lunch_combo ose_n7100-userdebug
 add_lunch_combo ose_nozomi-userdebug
 add_lunch_combo ose_p3100-userdebug
 add_lunch_combo ose_p3110-userdebug
-add_lunch_combo ose_p5100-userdebug
-add_lunch_combo ose_p5110-userdebug
 add_lunch_combo ose_p700-userdebug
 add_lunch_combo ose_skyrocket-userdebug
 add_lunch_combo ose_t0lte-userdebug
@@ -61,4 +59,3 @@ add_lunch_combo ose_xt907-userdebug
 add_lunch_combo ose_xt925-userdebug
 add_lunch_combo ose_xt926-userdebug
 add_lunch_combo ose_xt1060-userdebug
-
