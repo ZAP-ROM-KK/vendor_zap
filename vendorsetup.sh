@@ -10,7 +10,6 @@ add_lunch_combo ose_d800-userdebug
 add_lunch_combo ose_d801-userdebug
 add_lunch_combo ose_d802-userdebug
 add_lunch_combo ose_deb-userdebug
-add_lunch_combo ose_e610-userdebug
 add_lunch_combo ose_endeavoru-userdebug
 add_lunch_combo ose_flo-userdebug
 add_lunch_combo ose_galaxysmtd-userdebug
@@ -55,7 +54,5 @@ add_lunch_combo ose_toro-userdebug
 add_lunch_combo ose_toroplus-userdebug
 add_lunch_combo ose_vibrantmtd-userdebug
 add_lunch_combo ose_vs980-userdebug
-add_lunch_combo ose_xt907-userdebug
 add_lunch_combo ose_xt925-userdebug
 add_lunch_combo ose_xt926-userdebug
-add_lunch_combo ose_xt1060-userdebug
