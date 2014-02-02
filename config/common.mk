@@ -120,6 +120,7 @@ PRODUCT_PACKAGES += \
 # DSPManager
 PRODUCT_PACKAGES += \
     DSPManager \
+    OmniSwitch \
     libcyanogen-dsp \
     audio_effects.conf
 
