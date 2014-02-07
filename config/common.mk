@@ -246,6 +246,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.askfirst=0 \
     ro.romstats.tframe=1
 
+# HFM Files
+PRODUCT_COPY_FILES += \
+    vendor/ose/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+    vendor/ose/prebuilt/etc/hosts.og:system/etc/hosts.og
+
 #Default buil.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
     pm.sleep.mode=1 \
