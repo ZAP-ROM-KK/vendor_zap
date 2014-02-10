@@ -198,3 +198,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ose.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.ose.version=$(OSE_VERSION) \
     ro.modversion=$(OSE_MOD_VERSION)
+    
+#Default buil.prop tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.sleep.mode=1 \
+    wifi.supplicant_scan_interval=180
