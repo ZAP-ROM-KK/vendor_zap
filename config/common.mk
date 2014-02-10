@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
 
 # Optional packages
 PRODUCT_PACKAGES += \
+    OmniSwitch \
     Basic \
     LiveWallpapersPicker \
     PhaseBeam
@@ -121,7 +122,6 @@ PRODUCT_PACKAGES += \
 # DSPManager
 PRODUCT_PACKAGES += \
     DSPManager \
-    OmniSwitch \
     libcyanogen-dsp \
     audio_effects.conf
 
@@ -177,7 +177,7 @@ endif
 # Versioning System
 # OSE Alpha releases
 PRODUCT_VERSION_MAJOR = 4.4.2
-PRODUCT_VERSION_MINOR = Alpha
+PRODUCT_VERSION_MINOR = Beta
 PRODUCT_VERSION_MAINTENANCE = 1
 
 ifdef OSE_BUILD_EXTRA
