@@ -181,6 +181,7 @@ vendor/ose/tools/squisher
 
 # cleanup unused built
 rm -f $OUTDIR/target/product/$device/ose_*-ota*.zip
+rm -f $OUTDIR/target/product/$device/OSE-OSE-*.zip
 
 # finished? get elapsed time
 t2=$($DATE +%s)
