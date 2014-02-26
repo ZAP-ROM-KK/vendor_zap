@@ -33,12 +33,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
 
 # Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/ose/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/ose/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/ose/prebuilt/common/bin/50-ose.sh:system/addon.d/50-ose.sh \
-    vendor/ose/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/ose/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+#PRODUCT_COPY_FILES += \
+    #vendor/ose/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    #vendor/ose/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    #vendor/ose/prebuilt/common/bin/50-ose.sh:system/addon.d/50-ose.sh \
+    #vendor/ose/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    #vendor/ose/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
 # OSE-specific init file
 PRODUCT_COPY_FILES += \
