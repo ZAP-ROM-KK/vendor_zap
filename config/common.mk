@@ -98,6 +98,9 @@ PRODUCT_COPY_FILES += \
 # Workaround for Apex zipalign fails
 PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
+    vendor/ose/prebuilt/common/app/Xposed.apk:system/app/Xposed.apk \
+    vendor/ose/prebuilt/common/app/XThemeEngine.apk:system/app/XThemeEngine.apk \
+    vendor/ose/prebuilt/common/app/SlimHuePurple.apk:system/app/SlimHuePurple.apk \
     vendor/ose/prebuilt/common/app/OSE_Stats.apk:system/app/OSE_Stats.apk
 
 # Embed SuperUser
