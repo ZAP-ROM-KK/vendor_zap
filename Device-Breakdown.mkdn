@@ -18,16 +18,16 @@ LG = 7
 ---------------------------------------------------------------------
 * __G2 AT&T (d800) :__ goldflame09
 * __G2 Intl (d802) :__ goldflame09
-* __G2 Sprint (ls980) :__ goldflame09, tucstwo
+* __G2 Sprint (ls980) :__ goldflame09
 * __G2 T-Mobile (d802) :__ goldflame09
-* __G2 Verizon (ls980) :__ tucstwo
+* __G2 Verizon (vs980) :__ tucstwo
 * __Nexus 4 (mako) :__ timpohladthomas
 * __Nexus 5 (hammerhead) :__ timpohladthomas
 
 Motorola = 7
 ---------------------------------------------------------------------
 * __Atrix HD (moto_msm8960) :__ timpohladthomas
-* __Moto G Unified (falcon) :__ Cameron581
+* __Moto G Unified (falcon) :__ anerikg, Cameron581
 * __Photon Q Sprint (moto_msm8960) :__ timpohladthomas
 * __Photon Q GSM (moto_msm8960) :__ timpohladthomas
 * __Razr HD GSM (moto_msm8960) :__ timpohladthomas
