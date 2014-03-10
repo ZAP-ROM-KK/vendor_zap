@@ -109,6 +109,7 @@ SUPERUSER_EMBEDDED := true
 # Required packages
 PRODUCT_PACKAGES += \
     Camera \
+    CellBroadcastReceiver \
     Development \
     OSEPapers \
     Superuser \
@@ -200,7 +201,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ose.ota.version=$(PRODUCT_VERSION_MAJOR) \
     ro.ose.version=$(OSE_VERSION) \
     ro.modversion=$(OSE_MOD_VERSION)
-    
+
 #Default buil.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
     pm.sleep.mode=1 \
