@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
     Development \
     LockClock \
     OSEPapers \
+    KernelTweaker \
     Superuser \
     su
 
