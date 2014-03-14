@@ -111,6 +111,7 @@ PRODUCT_PACKAGES += \
     Camera \
     CellBroadcastReceiver \
     Development \
+    LockClock \
     OSEPapers \
     Superuser \
     su
