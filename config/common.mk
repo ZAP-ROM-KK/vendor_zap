@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
     LockClock \
     OSEPapers \
     KernelTweaker \
+    ChameleonEngine \
     Superuser \
     su
 
