@@ -65,6 +65,7 @@ PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
     vendor/ose/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
+#Init.d Support
 PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/ose/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
@@ -95,7 +96,7 @@ PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/etc/init.d.cfg:system/etc/init.d.cfg \
     vendor/ose/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Workaround for Apex zipalign fails
+# Prebuilt Apks
 PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/ose/prebuilt/common/app/Xposed.apk:system/app/Xposed.apk \
@@ -106,35 +107,31 @@ PRODUCT_COPY_FILES += \
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
 
-# Required packages
+# System Apps
 PRODUCT_PACKAGES += \
     Camera \
     CellBroadcastReceiver \
     Development \
-    LockClock \
-    OSEPapers \
-    KernelTweaker \
-    ChameleonEngine \
+    Basic \
+    LiveWallpapersPicker \
+    PhaseBeam \
+    LatinIME \
+    BluetoothExt \
     Superuser \
     su
 
-# Optional packages
+# Extra Apps
 PRODUCT_PACKAGES += \
-    OmniSwitch \
-    Basic \
-    LiveWallpapersPicker \
-    PhaseBeam
+    LockClock \
+    OSEPapers \
+    KernelTweaker \
+    OmniSwitch
 
 # DSPManager
 PRODUCT_PACKAGES += \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf
-
-# Extra Optional packages
-PRODUCT_PACKAGES += \
-    LatinIME \
-    BluetoothExt
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -183,7 +180,7 @@ endif
 # Versioning System
 # OSE Alpha releases
 PRODUCT_VERSION_MAJOR = 4.4.2
-PRODUCT_VERSION_MINOR = Beta
+PRODUCT_VERSION_MINOR = Build
 PRODUCT_VERSION_MAINTENANCE = 1
 
 ifdef OSE_BUILD_EXTRA
