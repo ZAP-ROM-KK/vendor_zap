@@ -122,7 +122,6 @@ PRODUCT_PACKAGES += \
 # Extra Apps
 PRODUCT_PACKAGES += \
     LockClock \
-    OSEPapers \
     OSEStats \
     KernelTweaker \
     OmniSwitch
