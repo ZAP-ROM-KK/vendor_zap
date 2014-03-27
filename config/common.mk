@@ -101,8 +101,7 @@ PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/ose/prebuilt/common/app/Xposed.apk:system/app/Xposed.apk \
     vendor/ose/prebuilt/common/app/XThemeEngine.apk:system/app/XThemeEngine.apk \
-    vendor/ose/prebuilt/common/app/SlimHuePurple.apk:system/app/SlimHuePurple.apk \
-    vendor/ose/prebuilt/common/app/OSE_Stats.apk:system/app/OSE_Stats.apk
+    vendor/ose/prebuilt/common/app/SlimHuePurple.apk:system/app/SlimHuePurple.apk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
@@ -124,6 +123,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LockClock \
     OSEPapers \
+    OSEStats \
     KernelTweaker \
     OmniSwitch
 
@@ -201,6 +201,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ose.ota.version=$(PRODUCT_VERSION_MAJOR) \
     ro.ose.version=$(OSE_VERSION) \
     ro.modversion=$(OSE_MOD_VERSION)
+
+# ROM Statistics and ROM Identification
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.romstats.url=http://www.drdevs.com/stats/ose/ \
+    ro.romstats.name=OSE \
+    ro.romstats.version=$(shell date +"%m-%d-%y") \
+    ro.romstats.askfirst=0 \
+    ro.romstats.tframe=1
 
 #Default buil.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
