@@ -59,6 +59,10 @@ PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/xbin/zip:system/xbin/zip \
     vendor/ose/prebuilt/common/xbin/zipalign:system/xbin/zipalign
 
+# Copy libgif for Nova Launcher 3.0
+PRODUCT_COPY_FILES += \
+    vendor/ose/prebuilt/common/lib/libgif.so:system/lib/libgif.so
+
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
