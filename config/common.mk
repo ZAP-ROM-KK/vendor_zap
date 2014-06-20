@@ -206,7 +206,7 @@ endif
 
 # Versioning System
 # OSE Alpha releases
-PRODUCT_VERSION_MAJOR = 4.4.3
+PRODUCT_VERSION_MAJOR = 4.4.4
 PRODUCT_VERSION_MINOR = Build
 PRODUCT_VERSION_MAINTENANCE = 834620784
 
@@ -217,6 +217,16 @@ ifndef OSE_BUILD_TYPE
     OSE_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
     OSE_POSTFIX := -$(shell date +"%m%d%Y")
+endif
+
+# SlimIRC
+# export INCLUDE_SLIMIRC=1 for unofficial builds
+ifneq ($(filter WEEKLY OFFICIAL,$(SLIM_BUILD_TYPE)),)
+    INCLUDE_SLIMIRC = 1
+endif
+
+ifneq ($(INCLUDE_SLIMIRC),)
+    PRODUCT_PACKAGES += SlimIRC
 endif
 
 # Set all versions
