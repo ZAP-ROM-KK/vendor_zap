@@ -117,7 +117,6 @@ SUPERUSER_EMBEDDED := true
 
 # System Apps
 PRODUCT_PACKAGES += \
-    Camera \
     CellBroadcastReceiver \
     Development \
     Basic \
