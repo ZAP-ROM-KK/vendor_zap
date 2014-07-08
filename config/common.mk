@@ -110,7 +110,7 @@ PRODUCT_COPY_FILES += \
 # Prebuilt Apks
 PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
-    vendor/ose/prebuilt/common/app/tts.apk:system/app/tts.apk
+    vendor/ose/prebuilt/common/app/GoogleTTS.apk:system/app/GoogleTTS.apk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
