@@ -132,7 +132,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     OSEStats \
     KernelTweaker \
-    OmniSwitch
+    OmniSwitch \
+    EOSWeather
 
 # DSPManager
 PRODUCT_PACKAGES += \
