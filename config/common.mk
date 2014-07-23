@@ -156,7 +156,7 @@ PRODUCT_COPY_FILES += \
 
 # Viper4Android
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/viper/ViPER4Android.apk:system/app/ViPER4Android.apk
+    vendor/ose/prebuilt/common/etc/viper/ViPER4Android.apk:system/app/ViPER4Android.apk
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
