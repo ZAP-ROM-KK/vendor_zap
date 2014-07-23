@@ -135,12 +135,6 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     EOSWeather
 
-# DSPManager
-PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf
-
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
@@ -159,6 +153,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/ose/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
     vendor/ose/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
+
+# Viper4Android
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/viper/ViPER4Android.apk:system/app/ViPER4Android.apk
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
