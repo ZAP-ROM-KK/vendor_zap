@@ -1,2 +1,1 @@
-add_lunch_combo ose_hammerhead-userdebug
-add_lunch_combo ose_moto_msm8960dt-userdebug
+add_lunch_combo zap_p3100-userdebug

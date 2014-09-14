@@ -1,7 +1,7 @@
 # Inherit common stuff
-$(call inherit-product, vendor/ose/config/common.mk)
+$(call inherit-product, vendor/zap/config/common.mk)
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/ose/overlay/tablet
+PRODUCT_PACKAGE_OVERLAYS += vendor/zap/overlay/tablet
 
 # BT config
 PRODUCT_COPY_FILES += \

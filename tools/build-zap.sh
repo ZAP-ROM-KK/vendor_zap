@@ -4,7 +4,7 @@ usage()
 {
     echo -e ""
     echo -e ${txtbld}"Usage:"${txtrst}
-    echo -e "  build-ose.sh [options] device"
+    echo -e "  build-zap.sh [options] device"
     echo -e ""
     echo -e ${txtbld}"  Options:"${txtrst}
     echo -e "    -c# Cleanin options before build:"
@@ -23,20 +23,20 @@ usage()
     echo -e "    -v  Verbose build output"
     echo -e ""
     echo -e ${txtbld}"  Example:"${txtrst}
-    echo -e "    ./build-ose.sh -c moto_msm8960dt"
+    echo -e "    ./build-zap.sh -c p3100"
     echo -e ""
     exit 1
 }
 
 # colors
-. ./vendor/ose/tools/colors
+. ./vendor/zap/tools/colors
 
 if [ ! -d ".repo" ]; then
     echo -e ${red}"No .repo directory found.  Is this an Android build tree?"${txtrst}
     exit 1
 fi
-if [ ! -d "vendor/ose" ]; then
-    echo -e ${red}"No vendor/ose directory found.  Is this an OSE build tree?"${txtrst}
+if [ ! -d "vendor/zap" ]; then
+    echo -e ${red}"No vendor/zap directory found.  Is this an ZAP build tree?"${txtrst}
     exit 1
 fi
 
@@ -113,10 +113,10 @@ fi
 device="$1"
 
 # get current version
-eval $(grep "^OSE_VERSION_" vendor/ose/config/common.mk | sed 's/ [:=]\+ /=/g' | sed 's/shell//g')
-VERSION="$OSE_VERSION_MAJOR.$OSE_VERSION_MINOR.$OSE_VERSION_MAINTENANCE"
+eval $(grep "^ZAP_VERSION_" vendor/zap/config/common.mk | sed 's/ [:=]\+ /=/g' | sed 's/shell//g')
+VERSION="$ZAP_VERSION_MAJOR.$ZAP_VERSION_MINOR.$ZAP_VERSION_MAINTENANCE"
 
-echo -e ${cya}"Building ${bldppl}OSE"${txtrst}
+echo -e ${cya}"Building ${bldppl}ZAP"${txtrst}
 
 if [ "$opt_clean" -eq 1 ]; then
     make clean >/dev/null
@@ -174,7 +174,7 @@ fi
 # lunch device
 echo -e ""
 echo -e ${bldblu}"Lunching device"${txtrst}
-lunch "ose_$device-userdebug";
+lunch "zap_$device-userdebug";
 
 echo -e ""
 echo -e ${bldblu}"Starting compilation"${txtrst}
@@ -212,10 +212,10 @@ fi
 echo -e ""
 
 # squisher
-vendor/ose/tools/squisher
+vendor/zap/tools/squisher
 
 # cleanup unused built
-rm -f $OUTDIR/target/product/$device/ose_*-ota*.zip
+rm -f $OUTDIR/target/product/$device/zap_*-ota*.zip
 
 # finished? get elapsed time
 t2=$($DATE +%s)
