@@ -240,7 +240,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ROM Statistics and ROM Identification
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.romstats.url=http://www.drdevs.com/stats/zap/ \
+    ro.romstats.url=http://www.github.com/ZAP-ROM \
     ro.romstats.name=ZAP \
     ro.romstats.version=$(shell date +"%m-%d-%y") \
     ro.romstats.askfirst=0 \

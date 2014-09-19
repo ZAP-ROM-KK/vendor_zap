@@ -116,7 +116,8 @@ device="$1"
 eval $(grep "^ZAP_VERSION_" vendor/zap/config/common.mk | sed 's/ [:=]\+ /=/g' | sed 's/shell//g')
 VERSION="$ZAP_VERSION_MAJOR.$ZAP_VERSION_MINOR.$ZAP_VERSION_MAINTENANCE"
 
-echo -e ${cya}"Building ${bldppl}ZAP"${txtrst}
+echo -e ${bldgrn}"Building ${bldcya}${txtbld}ZAP"${txtrst}
+echo -e ""
 
 if [ "$opt_clean" -eq 1 ]; then
     make clean >/dev/null
