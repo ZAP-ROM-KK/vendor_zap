@@ -2,6 +2,6 @@
 #
 # Print startup info
 #
-L="log -p i -t ose"
+L="log -p i -t zap"
 
-$L "Welcome to Android `getprop ro.build.version.release` / oseKat `getprop ro.ose.version`";
+$L "Welcome to Android `getprop ro.build.version.release` / ZAP `getprop ro.zap.version`";
